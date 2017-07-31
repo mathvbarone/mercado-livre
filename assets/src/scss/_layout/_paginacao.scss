@@ -1,0 +1,36 @@
+/*PAGINACAO*/
+
+.paginacao-item {
+    >.paginacao-link {
+        border: 1px solid #fff;
+        padding: 5px 7px;
+        color: #000;
+        border-radius: 20px;
+        margin: 0 2px;
+        &.active {
+            border: 1px solid $first-color;
+            color: $first-color;
+        }
+        &:hover {
+            border: 1px solid $second-color;
+            color: $second-color;
+        }
+    }
+    &:not(:first-child),
+    &:not(:last-child) {
+        >.paginacao-link {
+            @include fontSize(14px);
+            font-weight: 700;
+        }
+    }
+    &:first-child,
+    &:last-child {
+        >.paginacao-link {
+            color: #24547e;
+            @include fontSize(20px);
+        }
+    }
+}
+
+
+/* /PAGINACAO*/

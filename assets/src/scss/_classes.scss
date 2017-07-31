@@ -1,0 +1,100 @@
+/* CLASSES */
+
+//UPARROW
+#upArrow {
+    z-index: 10;
+    backface-visibility: hidden;
+    position: fixed;
+    right: 20px;
+    bottom: -50px;
+    background: $first-color;
+    display: block;
+    text-align: center;
+    width: 50px;
+    line-height: 45px;
+    height: 50px;
+    border: 2px solid #fff;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.64);
+    .fa {
+        color: #fff;
+    }
+    &:hover {
+        border: 2px solid $first-color;
+        background: #fff;
+        .fa {
+            color: $first-color;
+        }
+    }
+}
+
+//TITLE
+.title-main {
+    @include fontSize(28px);
+    font-weight: 700;
+    span {
+        font-weight: 300;
+    }
+    &--default {
+        color: $first-color;
+        span {
+            color: $second-color;
+        }
+    }
+    &--white {
+        color: #fff;
+        span {
+            font-weight: 300;
+        }
+    }
+}
+
+//GO TOP
+.goTop {
+    @extend .bg-second;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    cursor: pointer;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+    transition: .3s;
+    display: none;
+    .fa {
+        @extend .color-white;
+        @extend .font-20;
+    }
+    &:not([data-active="true"]) {
+        display: none;
+    }
+    &:not(:hover) {
+        box-shadow: .1em .1em 1em .1em rgba(0, 0, 0, 0.2);
+        transform: scale(.8);
+        opacity: .5;
+    }
+}
+
+//BOX
+.box {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+// FULL WIDTH
+.fullwidth {
+    width: 100%;
+}
+
+// POSITION RELATIVE
+.relative {
+    position: relative;
+}
+
+// BLOCK
+.block {
+    display: block;
+}
+
+
+/* /CLASSES */
