@@ -1,7 +1,15 @@
 /* LISTAGEM  */
 
+.products-list{
+    margin: auto;
+    width: 95%;
+    max-width: 1180px;
+    position:absolute;
+    width:100%;
+}
 
 .products-list-item{
+    background:#fff;
     transition: ease-in-out 0.4s all;
     opacity: 0;
     transform: scale(0);

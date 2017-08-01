@@ -10279,7 +10279,7 @@ var start = {
     events: {
         init: function() {
 
-            //SETA DE SCROLL TOP
+            //EVENTO DE TRIGGER DO FILTRO
             $(".form").on("keyup", function() {
                 start.functions.filter();
             });

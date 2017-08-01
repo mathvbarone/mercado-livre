@@ -1315,7 +1315,7 @@ p {
     font-weight: lighter
 }
 
-.breadcrumb-box .breadcrumb-item:before,.color-white {
+.color-white {
     color: #fff
 }
 
@@ -1335,7 +1335,7 @@ p {
     color: #f0f0f0
 }
 
-.color-darkgray,.products-list-detail,.products-list-price,.products-list-title {
+.breadcrumb-box .breadcrumb-item:before,.color-darkgray,.products-list-detail,.products-list-price,.products-list-title {
     color: #585858
 }
 
@@ -2248,15 +2248,12 @@ p {
     display: block
 }
 
-.header-main {
+.breadcrumb,.header-main {
     padding: 10px 0
 }
 
-.breadcrumb {
-    margin-bottom: 40px;
-    -webkit-box-shadow: 0 1px 13px 0 rgba(0,0,0,.3);
-    box-shadow: 0 1px 13px 0 rgba(0,0,0,.3);
-    padding: 15px 0
+.absolute,.products-list {
+    position: absolute
 }
 
 .breadcrumb-box .breadcrumb-item:before {
@@ -2269,13 +2266,17 @@ p {
 }
 
 .breadcrumb-item,.breadcrumb-item:not(:last-child) .breadcrumb-link:not(:hover) {
-    color: #3483fa;
+    color: #585858;
     font-size: 13px;
     font-size: .8125rem
 }
 
-.breadcrumb-item:last-child .breadcrumb-link,.breadcrumb-item:not(:last-child) .breadcrumb-link:hover {
-    color: #fde700
+.breadcrumb-item:not(:last-child) .breadcrumb-link:hover {
+    color: #3483fa
+}
+
+.breadcrumb-item:last-child .breadcrumb-link {
+    color: #585858
 }
 
 .breadcrumb-item:last-child .breadcrumb-link:hover {
@@ -2313,7 +2314,14 @@ p {
     font-size: 1.25rem
 }
 
+.products-list {
+    margin: auto;
+    max-width: 1180px;
+    width: 100%
+}
+
 .products-list-item {
+    background: #fff;
     -webkit-transition: ease-in-out .4s all;
     -o-transition: ease-in-out .4s all;
     transition: ease-in-out .4s all;
@@ -2397,10 +2405,6 @@ p {
 
 .hidden {
     display: none
-}
-
-.absolute {
-    position: absolute
 }
 
 @media (max-width:768px) {
