@@ -1,4 +1,18 @@
 //HOME
-@mixin listagem--md {}
+@mixin listagem--md {
+    .products-list-image{
+        width:115px;
+        height:115px;
+    }
+    .products-list-price{
+        @include fontSize(22px);
+    }
+    .products-list-title{
+        @include fontSize(13px);
+    }
+    .products-list-detail{
+        @include fontSize(15px);
+    }
+}
 
 // /HOME

@@ -10249,39 +10249,39 @@
 var start = {
 
     functions: {
+        filter: function(){
 
-        // ANIMAÇÃO DE SCROLL AO TOPO DO SITE
-        scrollTop: function() {
-            $("html, body").animate({ scrollTop: 0, }, "slow", "swing");
-        },
-
-        // BOTÃO PARA RETORNO AO TOPO DO SITE
-        arrowBack: function() {
-            if ($(window).scrollTop() > 10) {
-                $('#upArrow').css("bottom", "40px");
-            } else {
-                $('#upArrow').css("bottom", "-50px");
+            //DECLARANDO VARIÁVEIS
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("input");
+            filter = input.value.toUpperCase();
+            ul = document.getElementsByClassName("products-list");
+            li = document.getElementsByClassName("products-list-item");
+            
+            //LOOP NA LI PARA RENDERIZAR OS PRODUTOS
+            for(i=0; i < li.length; i++){
+                a = li[i].getElementsByClassName("products-list-link")[0];
+                if(!input.value){
+                    li[i].classList.remove("show");
+                    li[i].classList.add("hide");
+                } else if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
+                    li[i].classList.remove("hide");
+                    li[i].classList.add("show");
+                } else{
+                    li[i].classList.remove("show");
+                    li[i].classList.add("hide");
+                }
             }
+
         }
     },
 
-
     events: {
         init: function() {
-            //DESABILITA O CLICK
-            $(document).on('click', '[data-prevent-default]', function(e) {
-                e.preventDefault();
-            });
-
-            //BOTÃO DE RETORNO
-            $(document).on('click', '[data-prevent-back]', function() {
-                window.history.back();
-            });
-
 
             //SETA DE SCROLL TOP
-            $(document).on("click", ".go", function() {
-                start.functions.scrollTop();
+            $(".form").on("keyup", function() {
+                start.functions.filter();
             });
         }
     },

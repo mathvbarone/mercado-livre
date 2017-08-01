@@ -15,14 +15,9 @@
             color: #000;
         }
         .input {
+            height:40px;
             &:focus {
                 border-color: $gray-color;
-            }
-            &--white {
-                background: #fff;
-                &:focus {
-                    border-color: gray;
-                }
             }
             @each $type in $type-status {
                 &--#{$type} {
@@ -32,6 +27,10 @@
                     }
                 }
             }
+        }
+        .input[type="search"]{
+            background: url('../images/search.png') 10px 10px no-repeat #fff;
+            padding-left:50px;
         }
         textarea {
             min-height: 110px;
