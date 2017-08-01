@@ -24,8 +24,21 @@ var start = {
                     li[i].classList.add("hide");
                 }
             }
+        },
 
+        
+    },
+
+    onLoad: {
+        
+        init: function() {
+            //FANCYBOX
+            $().fancybox({
+                selector: '[data-fancybox="product-gallery"]',
+                loop: true
+            });
         }
+        
     },
 
     events: {
@@ -35,10 +48,12 @@ var start = {
             $(".form").on("keyup", function() {
                 start.functions.filter();
             });
+
         }
     },
 
     init: function() {
+        start.onLoad.init();
         start.events.init();
     }
 };

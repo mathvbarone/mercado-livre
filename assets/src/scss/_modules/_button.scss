@@ -5,10 +5,9 @@
     [class*="btn--"] {
         transition: linear 0.2s all;
         @extend .font-first;
-        display: inline-block;
+        display: block;
         text-decoration: none;
         text-align: center;
-        position: relative;
         &[disabled] {
             cursor: not-allowed;
             opacity: .5;
@@ -21,8 +20,11 @@
             padding: 5px 14px;
         }
         &:not(.btn-small):not(.btn-big) {
-            padding: 10px 30px;
+            min-height: 40px;
+            display:block;
+            padding: 5px 30px;
             font-size: 14px;
+            line-height: 30px;
         }
         &.btn-big {
             padding: 15px 40px;
@@ -75,7 +77,6 @@
                 &[data-active="true"] {
                     &:not(.btn-gradient) {
                         background: lighten(nth($color-status, index($type-status, $type)), 10%);
-                        box-shadow: 0 0 13px 1px rgba(0, 0, 0, 0.49);
                         transform: scale(1.1);
                     }
                     &.btn-gradient {

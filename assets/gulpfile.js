@@ -61,7 +61,7 @@ gulp.task('css', function() {
 
 // JAVASCRIPT
 gulp.task('js', function() {
-    gulp.src(['src/js/jquery-3.2.1.js', 'src/js/swiper.jquery.js', 'src/js/validator.js', 'src/js/main.js'])
+    gulp.src(['src/js/jquery-3.2.1.js', 'src/js/jquery.fancybox.js', 'src/js/main.js'])
         .pipe(plumber())
         .pipe(concat('concat.js'))
         .pipe(gulp.dest(paths.dest.js))

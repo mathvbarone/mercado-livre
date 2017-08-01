@@ -6,6 +6,16 @@
     max-width: 1180px;
     position:absolute;
     width:100%;
+    z-index:10;
+    &.hide{
+        opacity: 0;
+        transform: scale(0);
+        height: 0;
+    }
+    &.show{
+        height:100vh;
+        background:#fff;
+    }
 }
 
 .products-list-item{
@@ -28,6 +38,7 @@
     opacity: 1;
     transform: scale(1);
     height: initial;
+    min-height:200px;
          &:not(:last-child) {
             border-bottom: 1px solid gainsboro;
         }
@@ -56,20 +67,24 @@
     }
 }
 
-.products-list-price{
-    @include fontSize(26px);
+.products-list-price,
+.products-list-title,
+.products-list-detail{
     @extend .color-darkgray;
     display:block;
 }
 
+
+.products-list-price{
+    @include fontSize(26px);
+}
+
 .products-list-title{
     @include fontSize(20px);
-    @extend .color-darkgray;
 }
 
 .products-list-detail{
     transition: ease-in-out 0.3s all;
-    @extend .color-darkgray;
      @include fontSize(20px);
 }
 
