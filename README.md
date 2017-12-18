@@ -1,6 +1,6 @@
-# Teste para vaga de dev front-end no Mercado Livre
+# Teste para vaga de dev Front-end no Mercado Livre
 
-Tecnologias utilizadas:
+### Tecnologias utilizadas:
 
 - HTML
 - CSS
